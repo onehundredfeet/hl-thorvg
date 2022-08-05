@@ -1,0 +1,6 @@
+[submodule "ext/thorvg"]
+	path = ext/thorvg
+	url = https://github.com/Samsung/thorvg.git
+[submodule "ext/hl-idl"]
+	path = ext/hl-idl
+	url = https://github.com/onehundredfeet/hl-idl.git

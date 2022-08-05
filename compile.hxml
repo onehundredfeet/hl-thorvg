@@ -1,0 +1,5 @@
+-cp .
+--library hl-idl
+--hl bin/main.hl
+
+--main "tests.Test"

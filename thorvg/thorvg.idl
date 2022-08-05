@@ -1,0 +1,30 @@
+
+
+[NoDelete]
+interface Engine {
+  //tvg::Initializer::init(tvg::CanvasEngine::Sw, 0);
+  [Internal="thorvg_engine_init", Static] void init(int threadCount);
+};
+
+
+[Internal="tvg::SwCanvas::Colorspace"]
+enum ColorSpace {
+    "CS_ABGR8888",
+    "CS_ARGB8888",
+    "CS_ABGR8888_STRAIGHT",
+    "CS_ARGB8888_STRAIGHT"
+};
+
+[Internal="tvg::Shape"]
+interface Shape {
+
+};
+
+[Internal="tvg::SwCanvas"]
+interface Canvas {
+  //void Canvas();
+  [Internal="createCanvas", Static] Canvas make();
+
+  void target( [Cast="uint32_t *"]bytes buffer, int stride, int width, int height, ColorSpace colorSpace);
+
+};
