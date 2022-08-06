@@ -1,5 +1,6 @@
 -cp .
 --library hl-idl
+-lib format
 --hl bin/main.hl
 
 --main "tests.Test"

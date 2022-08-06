@@ -4,6 +4,7 @@
 interface Engine {
   //tvg::Initializer::init(tvg::CanvasEngine::Sw, 0);
   [Internal="thorvg_engine_init", Static] void init(int threadCount);
+  [Internal="thorvg_engine_destroy", Static] void destroy();
 };
 
 
@@ -15,16 +16,24 @@ enum ColorSpace {
     "CS_ARGB8888_STRAIGHT"
 };
 
-[Internal="tvg::Shape"]
+[NoDelete,Internal="tvg::Shape"]
 interface Shape {
+  [Internal="createShape", Static,Const] Shape make();
+  void moveTo(float x, float y); 
+  void lineTo(float x, float y); 
+  void appendRect(float x, float y, float width, float height, float rx, float ry);
+  void fill(int r, int g, int b, int a); 
+  void close();
 
 };
 
 [Internal="tvg::SwCanvas"]
 interface Canvas {
-  //void Canvas();
   [Internal="createCanvas", Static] Canvas make();
 
   void target( [Cast="uint32_t *"]bytes buffer, int stride, int width, int height, ColorSpace colorSpace);
-
+  [CObject, Internal="canvas_push_shape"] void pushShape( Shape s );
+  void draw();
+  void sync();
 };
+
