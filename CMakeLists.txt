@@ -7,8 +7,8 @@ set(APP_DIR "${CMAKE_CURRENT_LIST_DIR}"
 set(THORVG_DIR "${APP_DIR}/ext/thorvg"
     CACHE PATH "Location of 'thorvg'")
 
-set(THORVG_INC_DIR ${THORVG_DIR}/inc)
-set(THORVG_LIB_DIR ${THORVG_DIR}/build/src)
+set(THORVG_INC_DIR ${THORVG_DIR}/installed/include)
+set(THORVG_LIB_DIR ${THORVG_DIR}/installed/lib)
 
 if (NOT HDLL_DESTINATION) 
     set(HDLL_DESTINATION "/usr/local/lib")

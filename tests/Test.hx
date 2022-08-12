@@ -1,4 +1,4 @@
-package tests;
+package ;
 
 import hl.Bytes;
 import thorvg.Native;

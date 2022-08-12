@@ -19,7 +19,7 @@ class Generator {
 ";
 	
 	public static function generateCpp() {	
-		var options = { idlFile : "thorvg/thorvg.idl", nativeLib : "thorvg", outputDir : "src", includeCode : INCLUDE, autoGC : true };
+		var options = { idlFile : "lib/thorvg/thorvg.idl", nativeLib : "thorvg", outputDir : "src", includeCode : INCLUDE, autoGC : true };
 		webidl.Generate.generateCpp(options);
 	}
 

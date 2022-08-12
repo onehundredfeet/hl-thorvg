@@ -6,6 +6,6 @@
 	"description" : "Limited support for thorvg in Haxe/HL",
 	"version" : "0.1.0",
 	"releasenote" : "",
-	"classPath": ".",
+	"classPath": "lib",
 	"dependencies": { "hl-idl" : ""}
 }
